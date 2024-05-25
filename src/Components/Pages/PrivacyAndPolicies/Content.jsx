@@ -17,12 +17,12 @@ const Content = ({ children }) => {
   useEffect(() => {
     if (pathname === "/privacy") {
       setIsSelected(0);
-    }else if (pathname === "/support") {
+    } else if (pathname === "/customersupport") {
+      setIsSelected(1);
+    } else if (pathname === "/refundpolicy") {
       setIsSelected(2);
-    } else if (pathname === "/refund") {
+    } else if (pathname === "/termsofuse") {
       setIsSelected(3);
-    } else if (pathname === "/transation") {
-      setIsSelected(4);
     }
   }, [pathname, isSelected]);
 
@@ -50,7 +50,9 @@ const Content = ({ children }) => {
                       <ListItem sx={{ padding: "0px" }} key={index}>
                         <ListItemButton
                           sx={{ padding: "0 10px" }}
-                          onClick={() => {setIsSelected(index),navigate(`${data.path}`)}}
+                          onClick={() => {
+                            setIsSelected(index), navigate(`${data.path}`);
+                          }}
                         >
                           <ListItemText sx={{ padding: "0px" }}>
                             <Typography

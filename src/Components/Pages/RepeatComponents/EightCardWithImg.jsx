@@ -49,24 +49,27 @@ const EightCardWithImg = () => {
             sx={{
               maxWidth: "100%",
               borderRadius: 3,
-              padding:1,
+              padding: 1,
               boxShadow: " rgba(0, 0, 0, 0.35) 0px 5px 15px",
             }}
           >
             <CardContent>
-                <Box sx={{display:"flex",justifyContent:"center"}}><IoShieldCheckmarkOutline size={40} /></Box>
-              <Typography sx={{ fontSize: "20px", textAlign: "Center" ,mt:"15px"}}>
+              <Box sx={{ display: "flex", justifyContent: "center" }}>
+                <IoShieldCheckmarkOutline size={40} />
+              </Box>
+              <Typography
+                sx={{ fontSize: "20px", textAlign: "Center", mt: "15px" }}
+              >
                 High Performance
               </Typography>
               <Typography
                 sx={{
                   fontSize: "14px",
                   textAlign: "Center",
-                  lineHeight: "23px",
                   letterSpacing: 1,
                   mt: "0.4rem",
                   color: "#677788",
-                  lineHeight:1.7  
+                  lineHeight: 1.7,
                 }}
               >
                 Automatically clone your application data three times to ensure

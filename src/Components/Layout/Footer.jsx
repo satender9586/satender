@@ -15,11 +15,16 @@ import { FaLinkedin } from "react-icons/fa6";
 function Footer() {
   return (
     <>
-      <Box sx={{padding:{xs:"1rem 2rem 2rem",md: "2rem 1.5rem"} , bgcolor: "#06439C" }}>
+      <Box
+        sx={{
+          padding: { xs: "1rem 2rem 2rem", md: "2rem 1.5rem" },
+          bgcolor: "#06439C",
+        }}
+      >
         <Box
           sx={{
             display: "grid",
-            gridTemplateColumns:{xs: "repeat(1, 1fr)",md:"repeat(5, 1fr)"},
+            gridTemplateColumns: { xs: "repeat(1, 1fr)", md: "repeat(5, 1fr)" },
             gap: 4,
           }}
         >
@@ -34,8 +39,7 @@ function Footer() {
                   color: "#FFFFFF",
                   fontSize: "14px",
                   marginBottom: "8px",
-                  fontFamily:"poppins",
-                  color:""
+                  fontFamily: "poppins",
                 }}
               >
                 <span style={{ paddingRight: "0.5rem" }}>
@@ -50,7 +54,7 @@ function Footer() {
                   fontSize: "14px",
                   marginBottom: "8px",
                   mt: "1.3rem",
-                  fontFamily:"poppins"
+                  fontFamily: "poppins",
                 }}
               >
                 <span style={{ paddingRight: "0.5rem" }}>
@@ -65,7 +69,7 @@ function Footer() {
                   fontSize: "14px",
                   marginBottom: "8px",
                   mt: "1.3rem",
-                  fontFamily:"poppins"
+                  fontFamily: "poppins",
                 }}
               >
                 <span style={{ paddingRight: "0.5rem" }}>
@@ -81,7 +85,7 @@ function Footer() {
                   mt: "1.3rem",
                   marginBottom: "8px",
                   lineHeight: "24px",
-                  fontFamily:"poppins"
+                  fontFamily: "poppins",
                 }}
               >
                 When You visit or interact with our sites, services or tools, we
@@ -92,7 +96,7 @@ function Footer() {
             </Box>
           </Box>
 
-          <Box display={{xs:"none",md:"block"}}>
+          <Box display={{ xs: "none", md: "block" }}>
             <ListOfInfo
               lengths={[
                 "About Us",
@@ -119,7 +123,7 @@ function Footer() {
             />
           </Box>
 
-          <Box display={{xs:"none",md:"block"}}>
+          <Box display={{ xs: "none", md: "block" }}>
             <ListOfInfo
               lengths={[
                 "Dedicated CPU",
@@ -150,7 +154,7 @@ function Footer() {
               title={"Databases"}
             />
           </Box>
-          <Box display={{xs:"none",md:"block"}}>
+          <Box display={{ xs: "none", md: "block" }}>
             <ListOfInfo
               lengths={[
                 "Cloud Firewall",
@@ -179,7 +183,7 @@ function Footer() {
               title={"Features"}
             />
           </Box>
-          <Box >
+          <Box>
             <ListOfInfo
               lengths={[
                 "Solution Overview",
@@ -195,12 +199,10 @@ function Footer() {
             />
             <ListOfInfo1
               lengths={[
-               
                 { name: "Term & Conditions", path: "/privacy" },
                 { name: "Terms use", path: "/termsofuse" },
                 { name: "Support Policy", path: "/customersupport" },
-                 { name: "Refund Policy", path: "/refundpolicy" },
-               
+                { name: "Refund Policy", path: "/refundpolicy" },
               ]}
               title={"Company"}
             />
@@ -232,7 +234,7 @@ export const ListOfInfo = ({ lengths, title }) => {
           fontSize: "18px",
           marginBottom: "8px",
           fontWeight: "600",
-          fontFamily:"poppins"
+          fontFamily: "poppins",
         }}
       >
         {title}
@@ -245,7 +247,7 @@ export const ListOfInfo = ({ lengths, title }) => {
               color: "#D4D4D4",
               fontSize: "15px",
               paddingBottom: "0.2rem",
-              fontFamily:"poppins"
+              fontFamily: "poppins",
             }}
           >
             {data}
@@ -266,7 +268,7 @@ export const ListOfInfo1 = ({ lengths, title }) => {
           fontSize: "18px",
           marginBottom: "8px",
           fontWeight: "600",
-          fontFamily:"poppins"
+          fontFamily: "poppins",
         }}
       >
         {title}
@@ -288,7 +290,7 @@ export const ListOfInfo1 = ({ lengths, title }) => {
                 color: "#D4D4D4",
                 fontSize: "15px",
                 paddingBottom: "0.2rem",
-                fontFamily:"poppins"
+                fontFamily: "poppins",
               }}
             >
               {data.name}
@@ -309,7 +311,7 @@ export const ListOfInfocontact = ({ lengths, title }) => {
           fontSize: "18px",
           marginBottom: "8px",
           fontWeight: "600",
-          fontFamily:"poppins"
+          fontFamily: "poppins",
         }}
       >
         {title}
@@ -333,7 +335,7 @@ export const ListOfInfocontact = ({ lengths, title }) => {
                 color: "#D4D4D4",
                 fontSize: "15px",
                 paddingBottom: "0.2rem",
-                fontFamily:"poppins"
+                fontFamily: "poppins",
               }}
             >
               {data.name}
