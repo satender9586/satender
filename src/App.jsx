@@ -30,7 +30,15 @@ import VPC from "./Components/Pages/VPC/VPC";
 import Vpn from "./Components/Pages/Vpn/Vpn";
 import Ip from "./Components/Pages/Ip/Ip";
 import Ipv4 from "./Components/Pages/Ipv4/Ipv4";
-
+import Ip6 from "./Components/Pages/Ip6/Ip6";
+import VirtualRoute from "./Components/Pages/VirtutalRoute/VirtualRoute";
+import GateWay from "./Components/Pages/GateWay/GateWay";
+import IPSEC from "./Components/Pages/IPSEC/IPSEC";
+import SolutionOverView from "./Components/Pages/SolutionPages/SolutionOverView/SolutionOverView";
+import SecuritySolution from "./Components/Pages/SolutionPages/SecuritySolution/SecuritySolution";
+import Trust from "./Components/Pages/SolutionPages/Trust/Trust";
+import Management from "./Components/Pages/SolutionPages/Management/Management";
+import Problem from "./Components/Pages/SolutionPages/Problem/Problem";
 
 function App() {
   return (
@@ -70,7 +78,10 @@ function App() {
          <Route path="/vpn" element={<Vpn />}/>
          <Route path="/ip" element={<Ip />}/>
          <Route path="/ipv4" element={<Ipv4 />}/>
-         
+         <Route path="/Ip6" element={<Ip6/>}/>
+         <Route path="/Virtual" element={<VirtualRoute/>}/>
+         <Route path="/gateway" element={<GateWay/>}/>
+         <Route path="/ipsec" element={<IPSEC/>}/>
 
         {/*---------------------------------------------------*/}
 
@@ -80,6 +91,13 @@ function App() {
         <Route path="/Sql" element={<Sql/>}/>
         <Route path="/PostgreSQL" element={<PostgreSQL/>}/>
          {/*-------------------------------------------------*/}
+
+         {/* --------------------Solution Pages----------- */}
+         <Route path="/solutionoverview" element={<SolutionOverView/>}/>
+         <Route path="/securitysolution" element={<SecuritySolution/>}/>
+         <Route path="/trust" element={<Trust/>}/>
+         <Route path="/management" element={<Management/>}/>
+         <Route path="/problem" element={<Problem/>}/>
       
       </Routes>
     </>

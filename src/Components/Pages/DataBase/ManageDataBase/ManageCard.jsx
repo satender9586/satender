@@ -8,7 +8,7 @@ import CardContent from "@mui/material/CardContent";
 
 const ManageCard = () => {
   return (
-    <Box bgcolor={"#F7FAFF"} sx={{ padding: "0rem 3rem", paddingBottom: "2.5rem" }}>
+    <Box bgcolor={"#F7FAFF"} sx={{ padding: "2rem 3rem"}}>
       <Typography sx={{ textAlign: "Center", fontSize: "35px" }}>
       Fully-Managed Databases
       </Typography>

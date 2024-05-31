@@ -13,8 +13,8 @@ const Cpu = () => {
         <CartPage />
         <PriceInfo />
         <Feature />
-        <Parteners />
-        <ComputeFamily/>
+          <Parteners />
+          <ComputeFamily/>
       </LayoutPages>
     </>
   );

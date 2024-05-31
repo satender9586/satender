@@ -65,8 +65,7 @@ const TwoCardWithTitle = () => {
                 sx={{
                   fontSize: "14px",
                   textAlign: "Center",
-                  lineHeight: "23px",
-                  letterSpacing: 1,
+                 letterSpacing: 1,
                   mt: "0.4rem",
                   color: "#677788",
                   lineHeight: 1.8,

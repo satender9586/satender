@@ -7,10 +7,10 @@ import CardContent from "@mui/material/CardContent";
 const Feature = () => {
   return (
     <>
-      <Box bgcolor={"#F7FAFF"} sx={{ padding: "2rem 5%" }}>
+      <Box bgcolor={"#F7FAFF"} sx={{ padding: {xs:"2rem 2rem",md:"2rem 5%"} }}>
         <Typography
           sx={{
-            fontSize: "40px",
+            fontSize: {xs:"22px",sm:"25px",md:"40px"},
             fontWeight: 500,
             letterSpacing: 2,
             textAlign: "center",
@@ -22,8 +22,8 @@ const Feature = () => {
         <Box
           sx={{
             display: "grid",
-            gap: 4,
-            gridTemplateColumns: "repeat(4, 2fr)",
+            gap: {xs:2,sm:2,md:3,lg:4},
+            gridTemplateColumns: {xs:"repeat(1, 1fr)",sm:"repeat(2, 1fr)",md:"repeat(3, 1fr)",lg:"repeat(4, 2fr)"},
             my: "1rem",
           }}
         >
@@ -66,14 +66,14 @@ const Feature = () => {
             </Box>
           ))}
         </Box>
-        <Box sx={{ display: "flex", justifyContent: "Center", mt: "2.5rem" }}>
+        <Box sx={{ display: "flex", justifyContent: "Center", mt: {xs:"1rem",sm:"2rem",md:"2.5rem"} }}>
           <Button
             variant="contained"
             sx={{
               borderRadius: "10px",
               bgcolor: "#0094FF",
               textTransform: "capitalize",
-              padding: "0.6rem 2.3rem",
+              padding: {xs:"0.3rem 1.5rem",md:"0.6rem 2.3rem"},
               fontSize: "20px",
               fontWeight: "600",
             }}

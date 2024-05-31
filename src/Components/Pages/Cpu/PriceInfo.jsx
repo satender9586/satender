@@ -7,11 +7,11 @@ import TabCart from "./TabCart";
 
 const PriceInfo = () => {
   return (
-    <Box sx={{ padding: "2rem 3rem",paddingBottom:"3.5rem" }}>
-      <Box>
+    <Box sx={{ padding: {xs:"2rem 1rem",md:"2rem 3rem"},paddingBottom:"3.5rem" }}>
+      <Box >
         <Typography
           sx={{
-            fontSize: "40px",
+            fontSize: {xs:"22px",sm:"25px",md:"40px"},
             fontWeight: 500,
             letterSpacing: 2,
             textAlign: "center",
@@ -21,7 +21,7 @@ const PriceInfo = () => {
         </Typography>
         <Typography
           sx={{
-            fontSize: "20px",
+            fontSize: {xs:"18px",sm:"18px",md:"22px"},
             letterSpacing: 0,
             textAlign: "center",
           }}
@@ -31,17 +31,17 @@ const PriceInfo = () => {
         </Typography>
       </Box>
       <Box
-        padding={"2.5rem"}
+        padding={{xs:"1rem",md:"2.5rem"}}
         display={"flex"}
         flexWrap={"wrap"}
         justifyContent={"space-between"}
-        gap={6}
+        gap={{xs:3,md:6}}
       >
         {[1, 2, 3, 4].map((data, index) => (
           <Card
             key={index}
             sx={{
-              maxWidth: 450,
+              maxWidth: {xs:"100%",sm:450},
               borderRadius: 3,
               boxShadow: " rgba(0, 0, 0, 0.35) 0px 5px 15px",
             }}

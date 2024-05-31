@@ -2,16 +2,12 @@ import { Box, Grid, Typography } from "@mui/material";
 import React from "react";
 import { FaCloud } from "react-icons/fa";
 
-// import img from "../../../../assets/Pages/DataBase/Mongodb/Hassle.svg";
-// import img1 from "../../../../assets/Pages/DataBase/PostgreSQL/acess.svg";
-// import img2 from "../../../../assets/Pages/DataBase/Mongodb/reliable.svg";
-// import img3 from "../../../../assets/Pages/DataBase/PostgreSQL/solution.svg";
 
 
 
 const Deploy = () => {
   return (
-    <Box sx={{ padding: { xs: "0rem 4%", md: "0rem  5% 3rem   5%" } }}>
+    <Box sx={{ padding: { xs: "2rem 4%", md: "2rem  5% 3rem   5%" } }}>
     <Typography
       sx={{
         fontSize: { xs: "26px", md: "30px", lg: "40px" },

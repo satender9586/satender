@@ -1,10 +1,10 @@
-import React from 'react'
-import { Box,Typography } from '@mui/material'
+import React from "react";
+import { Box, Typography } from "@mui/material";
 
-const Banner = ({data}) => {
+const Banner = ({ data }) => {
   return (
     <>
-         <Box
+      <Box
         sx={{
           height: "60vh",
           bgcolor: "#673DE6",
@@ -24,7 +24,7 @@ const Banner = ({data}) => {
               paddingY: "0.7rem",
             }}
           >
-           {data.title}
+            {data.title}
           </Typography>
           <Typography
             sx={{
@@ -34,12 +34,12 @@ const Banner = ({data}) => {
               color: "White",
             }}
           >
-           {data.desc}
+            {data.desc}
           </Typography>
         </Box>
       </Box>
     </>
-  )
-}
+  );
+};
 
-export default Banner
+export default Banner;

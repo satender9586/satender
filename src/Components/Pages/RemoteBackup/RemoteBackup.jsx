@@ -8,19 +8,19 @@ import remoteBackupBanner from "../../../assets/Pages/remoteBackupBanner.webp"
 
 
 function RemoteBackup() {
-   const data = {
-    img:remoteBackupBanner,
-    title: {
-      first: "Reliable and Scalable ",
-      second: "Remote Backup ",
-      third: "Solutions",
-      forth: "",
-    },
-    desc: {
-      first: "Safeguard your data by replicating it to offsite servers to ",
-      second: "ensure easy recovery.",
-    },
-  };
+    const data = {
+      img:remoteBackupBanner,
+      title: {
+        first: "Reliable and Scalable ",
+        second: "Remote Backup ",
+        third: "Solutions",
+        forth: "",
+      },
+      desc: {
+        first: "Safeguard your data by replicating it to offsite servers to ",
+        second: "ensure easy recovery.",
+      },
+    };
   return (
     <>
       <Layout>

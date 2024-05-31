@@ -31,8 +31,7 @@ const Navbaar = () => {
 
   const isPopoverOpen = (popoverId) => openPopover === popoverId;
 
-  // sx={{ boxShadow: "rgba(0, 0, 0, 0.30) 1.95px 1.95px 2.6px" }}
-  // sx={{ boxShadow: "none" }}
+
 
   return (
     <Box>
@@ -46,6 +45,7 @@ const Navbaar = () => {
             color: "black",
             boxShadow: "none",
             minHeight: "0px",
+            padding:{xs:"0.8rem 1rem",sm:"0px"}
           }}
         >
           <Box
@@ -133,7 +133,7 @@ const Navbaar = () => {
                             handlePopoverOpen(event, "product")
                           }
                         >
-                          <img width={13} src={drop} />
+                          <img width={11} src={drop} />
                         </Button>
                       </Typography>
                       <Popover
@@ -201,7 +201,7 @@ const Navbaar = () => {
                             handlePopoverOpen(event, "solution")
                           }
                         >
-                          <img width={13} src={drop} />
+                          <img width={11} src={drop} />
                         </Button>
                       </Typography>
 
@@ -262,7 +262,7 @@ const Navbaar = () => {
                           }}
                           // onClick={() => navigate("/marketplace")}
                         >
-                          <img width={13} src={drop} />
+                          <img width={11} src={drop} />
                         </Button>
                       </Typography>
                     </div>
@@ -301,7 +301,7 @@ const Navbaar = () => {
                             handlePopoverOpen(event, "pricing")
                           }
                         >
-                          <img width={13} src={drop} />
+                          <img width={11} src={drop} />
                         </Button>
                       </Typography>
 
@@ -370,7 +370,7 @@ const Navbaar = () => {
                             handlePopoverOpen(event, "chooseUs")
                           }
                         >
-                          <img width={13} src={drop} />
+                          <img width={11} src={drop} />
                         </Button>
                       </Typography>
 

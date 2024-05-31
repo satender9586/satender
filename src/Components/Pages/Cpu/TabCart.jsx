@@ -56,17 +56,17 @@ const TabCart = () => {
   return (
     <Box>
       <Typography
-        sx={{ textAlign: "center", fontSize: "35px", fontWeight: 500 }}
+        sx={{ textAlign: "center",  fontSize: {xs:"22px",sm:"25px",md:"40px"}, fontWeight: 500 }}
       >
         Say Goodbye to Overpriced Adopt
       </Typography>
       <Typography
-        sx={{ textAlign: "center", fontSize: "35px", fontWeight: 500 }}
+        sx={{ textAlign: "center",  fontSize: {xs:"22px",sm:"25px",md:"40px"}, fontWeight: 500 }}
       >
         Indian Right Priced
       </Typography>
 
-      <Box sx={{ width: "100%", padding: "0 15%", mt: "1rem" }}>
+      <Box sx={{ width: "100%", padding: {xs:"0 1rem",sm:"0 1rem",md:"0 15%"}, mt: "1rem" }}>
         <Card
           sx={{
             maxWidth: "100%",
@@ -77,13 +77,13 @@ const TabCart = () => {
           <CardMedia>
             <Box
               bgcolor={"#0068FF"}
-              padding={"0.5rem 2rem"}
+              padding={{xs:"0.5rem 1rem",md:"0.5rem 2rem"}}
               paddingBottom={"1rem"}
             >
-              <Typography sx={{ fontSize: "40px", color: "White" }}>
+              <Typography sx={{  fontSize: {xs:"20px",sm:"25px",md:"40px"}, color: "White" }}>
                 Basic Virtual Machine Cost
               </Typography>
-              <Typography sx={{ fontSize: "18px", color: "White" }}>
+              <Typography sx={{  fontSize: {xs:"14px",sm:"18px",md:"18px"}, color: "White" }}>
                 Get predictable pricing with our all-in-one packages, and start
                 saving today. Compare Cloude Data and choose the best cost-
                 effective options against AWS, GCP, and Azure.
@@ -104,14 +104,14 @@ const TabCart = () => {
               </Tabs>
             </Box>
           </CardMedia>
-          <CardContent>
+          <CardContent sx={{padding:{xs:"0px",sm:"0px",md:"auto"}}}>
             <Box
               bgcolor={"#D5D5D5"}
               padding={"0.4rem"}
               borderRadius={"5px"}
               margin={"0 1rem"}
             >
-              <Typography sx={{ textAlign: "center", color: "#6F7F8F" }}>
+              <Typography sx={{ textAlign: "center", color: "#6F7F8F",fontSize: {xs:"14px",sm:"18px",md:"18px"}, }}>
                 4 GiB Memory | 80 GiB Storage | 1,000 GiB Bandwidth
               </Typography>
             </Box>

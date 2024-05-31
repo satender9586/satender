@@ -10,13 +10,13 @@ import { Box } from "@mui/material";
 const Tables = ({ data }) => {
   return (
     <>
-      <TableContainer component={Paper}>
-        <Table sx={{ minWidth: 500 }}>
-          <TableBody>
+      <TableContainer component={Paper} >
+        <Table sx={{ minWidth: {xs:"100%",md:500}}}>
+          <TableBody >
             {data?.map((row, index) => (
               <TableRow key={index} sx={{ borderTop: "none" }}>
                 <TableCell component="th" sx={{ paddingY: "8px" }} scope="row">
-                  <img width={50} src={row.img} />
+                  <Box component={"img"} width={{xs:30,sm:30,md:50}} src={row.img} />
                 </TableCell>
                 <TableCell
                   style={{ width: 160 }}
@@ -28,10 +28,10 @@ const Tables = ({ data }) => {
                   sx={{ paddingY: "8px" }}
                   align="right"
                 >
-                  <Box fontWeight={"600"} color={row?.color} fontSize={"20px"}>
+                  <Box fontWeight={"600"} color={row?.color} fontSize={{xs:"15px",sm:"16px",md:"20px"}}>
                     {row.price}
                   </Box>
-                  <Box color={"#6F7F8F"}> {row.name}</Box>
+                  <Box color={"#6F7F8F"} display={{xs:"none",md:"block"}}> {row.name}</Box>
                 </TableCell>
               </TableRow>
             ))}

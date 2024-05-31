@@ -34,8 +34,8 @@ const EightCardWithImg = () => {
         sx={{
           mt: "2rem",
           display: "grid",
-          columnGap: 6,
-          rowGap: 6,
+          columnGap: {xs:1,sm:2,md:3,lg:4,xl:5},
+          rowGap:{xs:3,sm:3,md:3,lg:4,xl:5},
           gridTemplateColumns: {
             xs: "repeat(1, 1fr)",
             sm: "repeat(2, 1fr)",

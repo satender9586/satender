@@ -9,10 +9,10 @@ const CartPage = () => {
   return (
     <>
       <Box sx={{ padding: "2rem 5%", bgcolor: "#F7FAFF" }}>
-        <Box>
+        <Box >
           <Typography
             sx={{
-              fontSize: "40px",
+              fontSize: {xs:"22px",sm:"25px",md:"40px"},
               fontWeight: 500,
               letterSpacing: 2,
               textAlign: "center",
@@ -22,8 +22,8 @@ const CartPage = () => {
           </Typography>
         </Box>
         <Box
-          padding={"2rem"}
-          sx={{ display: "flex", justifyContent: "space-evenly" }}
+          padding={{xs:"0.5rem",md:"2rem"}}
+          sx={{ display: "flex",gap:{xs:3,md:0}, justifyContent: {xs:"center",sm:"center",md:"space-evenly"},flexWrap:{xs:"wrap",md:"nowrap"} }}
         >
           <Card
             sx={{
@@ -34,7 +34,7 @@ const CartPage = () => {
           >
             <CardMedia
               component="img"
-              height="200"
+              height={{xs:"100px",md:"200"}}
               image={img1}
               alt="Paella dish"
             />
@@ -42,8 +42,8 @@ const CartPage = () => {
               <Typography
                 variant="body2"
                 color="text.secondary"
-                letterSpacing={1.5}
-                lineHeight={2.3}
+                letterSpacing={{xs:0,md:1.5}}
+                lineHeight={{xs:1.5,md:2.3}}
               >
                 Dedicated CPU provides exclusive access to CPU resources for a
                 single user or application. With no resource sharing, ensure
@@ -60,7 +60,7 @@ const CartPage = () => {
           >
             <CardMedia
               component="img"
-              height="200"
+              height={{xs:"100px",md:"200"}}
               image={img1}
               alt="Paella dish"
             />
@@ -68,8 +68,8 @@ const CartPage = () => {
               <Typography
                 variant="body2"
                 color="text.secondary"
-                letterSpacing={1.5}
-                lineHeight={2.3}
+                letterSpacing={{xs:0,md:1.5}}
+                lineHeight={{xs:1.5,md:2.3}}
               >
                 Dedicated CPU provides exclusive access to CPU resources for a
                 single user or application. With no resource sharing, ensure

@@ -8,23 +8,30 @@ import CardContent from "@mui/material/CardContent";
 import { useNavigate } from "react-router-dom";
 
 const Soution = () => {
-  const navigate = useNavigate()
+ 
+  const data = [
+    { name: "Solution Overview", desc: "Maximize Computing Potential",path:"/solutionoverview"},
+    { name: "Security Solution", desc: "Unbrekable security for your bussiness" ,path:"/securitysolution"},
+    { name: "User Management  ", desc: "Manage your cloud users easily" ,path:"/management"},
+    { name: "Managed Support ", desc: "Let us Handle Everything for you",path:"/problem" },
+  ];
+
+  const navigate = useNavigate();
   return (
     <>
-      <Box sx={{ display: "grid", gridTemplateColumns: "repeat(2, 1fr)" }}>
+      <Box sx={{ display: "grid", gridTemplateColumns: "repeat(2, 1fr)" }}> 
         <Box
           sx={{
             display: "grid",
             gridTemplateColumns: "repeat(2, 1fr)",
             padding: "1rem",
-            gap: 1,
-            
+            gap: 2,
           }}
         >
-          {[1, 2, 3, 4].map((data, index) => (
-            <Box key={data}>
+          {data.map((data, index) => (
+            <Box key={index}>
               <Card sx={{ maxHeight: "180px" }}>
-                <CardActions onClick={(()=>navigate("/"))}>
+                <CardActions onClick={() => navigate(data.path)}>
                   <CardContent>
                     <Box
                       padding={"0.5rem"}
@@ -41,11 +48,11 @@ const Soution = () => {
                       </Box>
                       <Box>
                         <Typography color="blue" fontSize={"20px"}>
-                          Solution Overview
+                          {data.name}
                         </Typography>
 
                         <Typography color={"#677797"}>
-                          Maximize Computing Potential
+                          {data.desc}
                         </Typography>
                       </Box>
                     </Box>

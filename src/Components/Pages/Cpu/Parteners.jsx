@@ -25,10 +25,10 @@ const Parteners = () => {
   }, [index]);
 
   return (
-    <Box sx={{ padding: "2rem 3rem" }}>
+    <Box  sx={{ padding: {xs:"2rem 2rem",md:"2rem 3rem"} }}>
       <Typography
         sx={{
-          fontSize: "40px",
+          fontSize: {xs:"22px",sm:"25px",md:"40px"},
           fontWeight: 500,
           letterSpacing: 2,
           textAlign: "center",
@@ -38,7 +38,7 @@ const Parteners = () => {
       </Typography>
       <Typography
         sx={{
-          fontSize: "40px",
+          fontSize: {xs:"22px",sm:"25px",md:"40px"},
           fontWeight: 500,
           letterSpacing: 2,
           textAlign: "center",
@@ -48,7 +48,7 @@ const Parteners = () => {
       </Typography>
       <Box>
         <Grid container spacing={2}>
-        <Grid item xs={6} md={4}>
+        <Grid item xs={12} sm={6} md={4}>
             <Box
               sx={{
                 display: "grid",
@@ -120,12 +120,12 @@ const Parteners = () => {
               ))}
             </Box>
           </Grid>
-          <Grid item xs={6} md={8}>
+          <Grid item xs={12} sm={6} md={8}>
             <Box
               sx={{
                 display: "grid",
-                gap: 3,
-                gridTemplateColumns: "repeat(3, 3fr)",
+                gap: {xs:3,sm:1,md:3},
+                gridTemplateColumns: {Xs:"repeat(1, 1fr)",sm:"repeat(2, 1fr)",md:"repeat(2, 1fr)",lg:"repeat(3, 3fr)"},
                 my: "1rem",
               }}
             >

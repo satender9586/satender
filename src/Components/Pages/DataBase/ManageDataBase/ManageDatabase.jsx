@@ -29,7 +29,6 @@ function ManageDatabase() {
         <Effort/>
         <Performance/>
         <ManageCard/>
-        
       </Layout>
     </>
   );

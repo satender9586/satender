@@ -9,9 +9,8 @@ const DataHandling= () => {
   return (
     <Box
       sx={{
-        padding: "0rem 3rem",
-        paddingBottom: "3.5rem",
-        paddingTop: "3.5rem",
+        padding: "2rem 3rem 3rem 3rem",
+        
       }}
     >
       <Typography sx={{ fontSize: "45px", textAlign: "center" }}>
