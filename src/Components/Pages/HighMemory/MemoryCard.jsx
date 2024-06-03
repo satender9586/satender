@@ -5,6 +5,24 @@ import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 
 const MemoryCard = () => {
+  const memoryData = [
+    {
+      name: "High Performance",
+      desc: "Experience remarkable performance with High Memory Instances, ideal for memory-intensive workloads demanding optimal efficiency",
+    },
+    {
+      name: "Dedicated Resources",
+      desc: "Exclusive access to dedicated CPUs and memory resources, providing faster performance and greater control over resource allocation",
+    },
+    {
+      name: "Customized computing",
+      desc: "Customize your instances based on your application's specific needs, such as how much memory and RAM you need.",
+    },
+    {
+      name: "Memory optimization",
+      desc: "Designed for optimal memory performance and efficiency. Ensuring that your applications run smoothly and without interruption.",
+    },
+  ];
   return (
     <>
       <Box
@@ -15,7 +33,7 @@ const MemoryCard = () => {
           gridTemplateColumns: "repeat(4, 2fr)",
         }}
       >
-        {[1, 2, 3, 4].map((data) => (
+        {memoryData?.map((data) => (
           <Box key={data}>
             <Card
               sx={{
@@ -40,7 +58,7 @@ const MemoryCard = () => {
                     mt={"1rem"}
                     color={"#06439C"}
                   >
-                    Dedicated Resources
+                    {data.name}
                   </Typography>
                 </Box>
                 <Typography
@@ -51,9 +69,7 @@ const MemoryCard = () => {
                   lineHeight={1.7}
                   mt={"0.3rem"}
                 >
-                  Exclusive access to dedicated CPUs and memory resources,
-                  providing faster performance and greater control over resource
-                  allocation.
+                  {data.desc}
                 </Typography>
               </CardContent>
             </Card>

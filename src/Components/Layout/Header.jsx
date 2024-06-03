@@ -5,7 +5,7 @@ import banner from "../../assets/Home/Banner.webp";
 const Header = () => {
   return (
     <>
-      <Box sx={{ position: "relative" }}  bgcolor={["rgb(253,251,240)","linear-gradient(90deg, rgba(253,251,240,1) 0%, rgba(216,219,254,1) 100%)"]}  height={{ xs:"500px",sm:"530px", lg: "550px", xl: "550px" }}>
+      <Box sx={{ position: "relative" }}   height={{ xs:"500px",sm:"530px", lg: "550px", xl: "550px" }}>
         <Box display={{ xs: "none",md:"block", lg: "block" }} >
           <Box
             component={"img"}

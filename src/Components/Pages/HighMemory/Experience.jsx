@@ -7,23 +7,18 @@ import right from "../../../assets/Pages/Right.svg";
 const Experience = () => {
   return (
     <>
-      <Box sx={{padding:"2rem 0 2rem 0rem"}}   bgcolor={"#F7FAFF"}>
-        <Box
-         
-        
-          display={"grid"}
-          justifyContent={"center"}
-          alignItems={"center"}
-        >
+      <Box sx={{ padding: "2rem 0 2rem 0rem" }} bgcolor={"#F7FAFF"}>
+        <Box display={"grid"} justifyContent={"center"} alignItems={"center"}>
           <Box>
-            <Typography fontSize={"35px"}>
+            <Typography textAlign={"center"} fontSize={{xs:"25px",sm:"25px",md:"30px",lg:"35px"}}>
               Experience Lightning-Fast Performance
             </Typography>
           </Box>
           <Box
+
             component="section"
             bgcolor={"#F7FAFF"}
-            display={"flex"}
+            display={{xs:"none",sm:"none",md:"flex"}}
             justifyContent={"center"}
             alignItems={"center"}
             gap={3}
@@ -73,8 +68,6 @@ const Experience = () => {
             display={"flex"}
             justifyContent={"flex-start"}
             alignItems={"center"}
-            height={400}
-            width={800}
           >
             <Box width={800} height={520}>
               <img src={picc} width={785} height={501} alt="logo" />
@@ -160,7 +153,7 @@ const Experience = () => {
             </Box>
           </Box>
         </Box>
-        ;
+       
       </Box>
     </>
   );

@@ -2,7 +2,10 @@ import { Box, Grid, Typography } from "@mui/material";
 import React from "react";
 import { FaCloud } from "react-icons/fa";
 
-const MenageMantInfo = () => {
+
+const MenageMantInfo = ({Managementinfodata}) => {
+  console.log("Managementinfodata",Managementinfodata)
+  
   return (
     <Box sx={{ padding: { xs: "0rem 4%", md: "3rem  5% 3.5rem  5%" } }}>
       <Typography
@@ -14,7 +17,7 @@ const MenageMantInfo = () => {
           lineHeight: 1,
         }}
       >
-        The Ultimate Cyber Defense to
+       {Managementinfodata[0].title1}
       </Typography>
       <Typography
         sx={{
@@ -24,7 +27,7 @@ const MenageMantInfo = () => {
           textAlign: "center",
         }}
       >
-        Secure Your Business
+        {Managementinfodata[0].title2}
       </Typography>
 
       <Typography
@@ -35,8 +38,17 @@ const MenageMantInfo = () => {
           color: "#677788",
         }}
       >
-        Protect Your Business with Advanced Threat Detection and Prevention to
-        Stay Ahead of Cybercriminals
+         {Managementinfodata[0].desc1}
+      </Typography>
+      <Typography
+        sx={{
+          fontSize: { xs: "17px", md: "20px" },
+          letterSpacing: 0,
+          textAlign: "center",
+          color: "#677788",
+        }}
+      >
+         {Managementinfodata[0].desc2}
       </Typography>
       <Box
         sx={{
@@ -46,34 +58,32 @@ const MenageMantInfo = () => {
           mt: "1.5rem",
         }}
       >
-        {[1, 2, 3, 4].map((data) => (
-          <Box>
+        {Managementinfodata.slice(1)?.map((data,index) => (
+          <Box key={index}>
             <Grid container>
               <Grid item xs={1}>
                 <Box>
-                  <FaCloud size={40} />
+                  {data.image}
                 </Box>
               </Grid>
               <Grid item xs={11} paddingLeft={"1.5rem"}>
                 <Typography
                   sx={{
-                    fontSize: { xs: "16px", md: "20px" },
+                    fontSize: { xs: "16px", md: "25px" },
                     letterSpacing: 1,
                   }}
                 >
-                  Advanced Network Protection
+                  {data.name}
                 </Typography>
                 <Typography
                   sx={{
-                    fontSize: { xs: "14px", md: "14px" },
+                    fontSize: { xs: "14px", md: "16px" },
                     letterSpacing: 1,
 
                     color: "#6F7F8F",
                   }}
                 >
-                  Protect your network traffic without accessing the command
-                  line or learning complicated security protocols. Our
-                  User-friendly interface makes it easy to secure the network.
+                  {data.desc}
                 </Typography>
               </Grid>
             </Grid>

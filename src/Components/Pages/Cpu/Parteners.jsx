@@ -4,6 +4,31 @@ import CardContent from "@mui/material/CardContent";
 import monitor from "../../../assets/Pages/monitor.png";
 import { CardActionArea } from "@mui/material";
 import { Box, Typography, Grid } from "@mui/material";
+import distrubution1 from "../../../assets/Pages/Distribution/1.png"
+import distrubution2 from "../../../assets/Pages/Distribution/2.png"
+import distrubution3 from "../../../assets/Pages/Distribution/3.png"
+import distrubution4 from "../../../assets/Pages/Distribution/4.png"
+import distrubution5 from "../../../assets/Pages/Distribution/5.png"
+import distrubution6 from "../../../assets/Pages/Distribution/6.png"
+import distrubution7 from "../../../assets/Pages/Distribution/7.png"
+import distrubution8 from "../../../assets/Pages/Distribution/8.png"
+import distrubution9 from "../../../assets/Pages/Distribution/9.png"
+import App1 from "../../../assets/Pages/App/1.png"
+import App2 from "../../../assets/Pages/App/2.png"
+import App3 from "../../../assets/Pages/App/3.png"
+import App4 from "../../../assets/Pages/App/4.png"
+import App5 from "../../../assets/Pages/App/5.png"
+import App6 from "../../../assets/Pages/App/6.png"
+import App7 from "../../../assets/Pages/App/7.png"
+import App8 from "../../../assets/Pages/App/8.png"
+import App9 from "../../../assets/Pages/App/9.png"
+import custom1 from "../../../assets/Pages/custom/1.png"
+import custom2 from "../../../assets/Pages/custom/2.png"
+import custom3 from "../../../assets/Pages/custom/3.png"
+import custom4 from "../../../assets/Pages/custom/4.png"
+import custom5 from "../../../assets/Pages/custom/5.png"
+import custom6 from "../../../assets/Pages/custom/6.png"
+
 
 import { useState } from "react";
 
@@ -13,19 +38,19 @@ const Parteners = () => {
   const [arr, setArr] = useState([]);
 
   useEffect(() => {
-    if (index === 0) {
-      setArr([1, 2, 3, 4, 5, 6, 7, 8, 9]);
+    if (index === 0) {4
+      setArr([{image:distrubution1,name:"Ubuntu"}, {image:distrubution2,name:"Fedora"}, {image: distrubution3,name:"Debian"}, {image: distrubution4,name:"Windows"}, {image:distrubution5,name:"jenkins"}, {image:distrubution6,name:"Centos"}, {image:distrubution7,name:"Red Hat"}, {image:distrubution8,name:"Alima Linux"}, {image:distrubution9,name:"Plesk"}]);
     }
     if (index === 1) {
-      setArr([1, 2, 3, 4, 5, 6, 7]);
+      setArr([{image:App1,name:"Wordpress"}, {image:App2,name:"Node JS"}, {image: App3,name:"Cpanel"}, {image: App4,name:"Docker"}, {image:App5,name:"Django"}, {image:App6,name:"MySQL"}, {image:App7,name:"MongoDB"}, {image:App8,name:"Postgre SQL"}, {image:App9,name:"GitLab"}]);
     }
     if (index === 2) {
-      setArr([1, 2, 3, 4, 5, 6]);
+      setArr([{image:custom1,name:"Docker"}, {image:custom2,name:"Django"}, {image: custom3,name:"MySQL"}, {image: custom4,name:"MongoDB"}, {image:custom5,name:"Postgre SQL"}, {image:custom6,name:"GitLab"}]);
     }
   }, [index]);
 
   return (
-    <Box  sx={{ padding: {xs:"2rem 2rem",md:"2rem 3rem"} }}>
+    <Box  sx={{ padding: {xs:"2rem 2rem",md:"2rem 3rem 3rem 3rem"} }}>
       <Typography
         sx={{
           fontSize: {xs:"22px",sm:"25px",md:"40px"},
@@ -129,8 +154,8 @@ const Parteners = () => {
                 my: "1rem",
               }}
             >
-              {arr?.map((data) => (
-                <Box key={data}>
+              {arr?.map((data,index) => (
+                <Box key={index}>
                   <Card
                     sx={{
                       maxWidth: "100%",
@@ -146,14 +171,14 @@ const Parteners = () => {
                           alignItems={"center"}
                           mt={"0.3rem"}
                         >
-                          <img width={40} src={monitor} alt="img" />
+                          <img width={40} src={data.image} alt="img" />
                           <Typography
                             textAlign={"center"}
                             fontSize={"17px"}
                             fontWeight={"600"}
                             mt={"1.2rem"}
                           >
-                            SSH Keys
+                            {data.name}
                           </Typography>
                         </Box>
                       </CardContent>

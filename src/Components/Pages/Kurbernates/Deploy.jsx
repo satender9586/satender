@@ -8,8 +8,8 @@ const Deploy = () => {
       <Box sx={{ display: "flex", gap: 1 }}>
         <Box flex={3} sx={{display:"flex"}} justifyContent={"center"} alignItems={"center"}>
           <Box>
-            <Typography sx={{fontSize:"24px",textAlign:"Center"}}>Deploy in Seconds</Typography>
-            <Typography sx={{fontSize:"14px",color:"#6F7F8F",textAlign:"center",lineHeight:"24px",letterSpacing:1,mt:"7px"}}>
+            <Typography sx={{fontSize:"25px",textAlign:"Center"}}>Deploy in Seconds</Typography>
+            <Typography sx={{fontSize:"19px",color:"#6F7F8F",textAlign:"center",lineHeight:"24px",letterSpacing:1,mt:"7px"}}>
               No more waiting, no more unnecessary delays. With easy to use and
               simple cloud platform, deploy your applications effortlessly in
               seconds.

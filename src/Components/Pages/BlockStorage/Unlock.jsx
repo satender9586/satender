@@ -10,7 +10,7 @@ import Infa from "../../../assets/Pages/Infa.svg";
 
 const Unlock = () => {
   return (
-    <Box sx={{ padding: "0rem 3rem" ,paddingBottom:"3.5rem",paddingTop:"3.5rem"}}>
+    <Box sx={{ padding: "0rem 3rem" ,paddingBottom:"3.5rem",paddingTop:"3rem"}}>
       <Typography sx={{ fontSize: "45px", textAlign: "center",  }}>
       Unlock the full potential of your data storage
       </Typography>
@@ -32,12 +32,12 @@ const Unlock = () => {
             </Typography>
            </Box>
            <Box display={"flex"} justifyContent={"center"} >
-            <Typography fontSize={"15px"}  letterSpacing={1} color={"#6F7F8F"}>
+            <Typography fontSize={"17px"}  letterSpacing={1} color={"#6F7F8F"}>
             Store and retrieve data in fixed-size blocks or chunks, 
             </Typography>
           </Box>
           <Box display={"flex"} justifyContent={"center"} >
-            <Typography fontSize={"15px"} letterSpacing={1} color={"#6F7F8F"}>
+            <Typography fontSize={"17px"} letterSpacing={1} color={"#6F7F8F"}>
             perfect for optimal-performance.
             </Typography>
           </Box>
@@ -52,17 +52,17 @@ const Unlock = () => {
             </Typography>
             </Box>
             <Box  display={"flex"} justifyContent={"center"}>
-            <Typography fontSize={"15px"} letterSpacing={1} color={"#6F7F8F"}>
+            <Typography fontSize={"17px"} letterSpacing={1} color={"#6F7F8F"}>
             Advanced block storage solutions designed for high-
             </Typography>
           </Box>
           <Box  display={"flex"} justifyContent={"center"}>
-            <Typography fontSize={"15px"}  letterSpacing={1} color={"#6F7F8F"}>
+            <Typography fontSize={"17px"}  letterSpacing={1} color={"#6F7F8F"}>
             performance, scalability, and seamless integration 
             </Typography>
           </Box>
           <Box  display={"flex"} justifyContent={"center"}>
-            <Typography fontSize={"15px"}  letterSpacing={1} color={"#6F7F8F"}>
+            <Typography fontSize={"17px"}  letterSpacing={1} color={"#6F7F8F"}>
             with your existing infrastructure.
             </Typography>
           </Box>

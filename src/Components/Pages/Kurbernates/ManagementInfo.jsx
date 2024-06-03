@@ -5,11 +5,11 @@ import { RiComputerFill } from "react-icons/ri";
 const ManagementInfo = () => {
   return (
     <Box sx={{ padding: "0rem 3rem" ,paddingBottom:"2.5rem"}}>
-      <Typography sx={{ fontSize: "35px", textAlign: "center" }}>
+      <Typography sx={{ fontSize: "40px", textAlign: "center" }}>
         Efficient and Flexible Kubernetes Management
       </Typography>
       <Typography
-        sx={{ fontSize: "17px", textAlign: "center", color: "#6F7F8F" }}
+        sx={{ fontSize: "20px", textAlign: "center", color: "#6F7F8F" }}
       >
         Simplify your Kubernetes management with a user-friendly platform for
         optimal efficiency.
@@ -24,10 +24,10 @@ const ManagementInfo = () => {
             <RiComputerFill fontSize={25} />
           </Box>
           <Box>
-            <Typography fontSize={"20px"} padding={"0px"}>
+            <Typography fontSize={"25px"} padding={"0px"}>
               Optimal Resource Utilization
             </Typography>
-            <Typography fontSize={"14px"} lineHeight={"29px"} letterSpacing={1} color={"#6F7F8F"}>
+            <Typography fontSize={"17px"} lineHeight={"29px"} letterSpacing={1} color={"#6F7F8F"}>
               Seamlessly distribute containers across your cluster to maximize
               resource efficiency.
             </Typography>
@@ -38,10 +38,10 @@ const ManagementInfo = () => {
             <RiComputerFill fontSize={25} />
           </Box>
           <Box>
-            <Typography fontSize={"20px"} padding={"0px"}>
+            <Typography fontSize={"25px"} padding={"0px"}>
               Automatic Cluster Scaling
             </Typography>
-            <Typography fontSize={"14px"} lineHeight={"29px"} letterSpacing={1} color={"#6F7F8F"}>
+            <Typography fontSize={"17px"} lineHeight={"29px"} letterSpacing={1} color={"#6F7F8F"}>
               Easily create and destroy resources in real-time with Horizontal
               Cluster Autoscaling, resulting in highly available and stable
               applications.Managing data storage doesn't have to be complicated.
@@ -55,10 +55,10 @@ const ManagementInfo = () => {
             <RiComputerFill fontSize={25} />
           </Box>
           <Box>
-            <Typography fontSize={"20px"} padding={"0px"}>
+            <Typography fontSize={"25px"} padding={"0px"}>
               Developer-Friendly and Portable
             </Typography>
-            <Typography fontSize={"14px"} lineHeight={"29px"} letterSpacing={1} color={"#6F7F8F"}>
+            <Typography fontSize={"17px"} lineHeight={"29px"} letterSpacing={1} color={"#6F7F8F"}>
               Easily manage your UKE cluster through our API and integrate
               Kubernetes management with your infrastructure. Move your existing
               applications and workloads quickly.
@@ -70,10 +70,10 @@ const ManagementInfo = () => {
             <RiComputerFill fontSize={25} />
           </Box>
           <Box>
-            <Typography fontSize={"20px"} padding={"0px"}>
+            <Typography fontSize={"25px"} padding={"0px"}>
               Easy App Deployment
             </Typography>
-            <Typography fontSize={"14px"} lineHeight={"29px"} letterSpacing={1} color={"#6F7F8F"}>
+            <Typography fontSize={"17px"} lineHeight={"29px"} letterSpacing={1} color={"#6F7F8F"}>
               Easily deploy apps with the Kubernetes tooling ecosystem. UKE
               (Cloude Data Kubernetes Engine) supports integration with popular
               K8S-related tools.

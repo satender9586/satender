@@ -5,7 +5,10 @@ import CardContent from "@mui/material/CardContent";
 import graph1 from "../../../assets/Pages/graph1.png";
 import TabCart from "./TabCart";
 
-const PriceInfo = () => {
+const PriceInfo = (priceData) => {
+
+
+
   return (
     <Box sx={{ padding: {xs:"2rem 1rem",md:"2rem 3rem"},paddingBottom:"3.5rem" }}>
       <Box >
@@ -17,7 +20,7 @@ const PriceInfo = () => {
             textAlign: "center",
           }}
         >
-          4X Computing Power for Critical Workloads
+          {priceData?.priceData?.title}
         </Typography>
         <Typography
           sx={{
@@ -26,8 +29,7 @@ const PriceInfo = () => {
             textAlign: "center",
           }}
         >
-          Dedicated compute solutions designed with your business needs in mind,
-          ensuring critical workloads perform efficiently.
+           {priceData?.priceData?.subtitle}
         </Typography>
       </Box>
       <Box
@@ -37,7 +39,7 @@ const PriceInfo = () => {
         justifyContent={"space-between"}
         gap={{xs:3,md:6}}
       >
-        {[1, 2, 3, 4].map((data, index) => (
+        {priceData?.priceData?.data?.map((data, index) => (
           <Card
             key={index}
             sx={{
@@ -55,15 +57,14 @@ const PriceInfo = () => {
                   alignItems={"Center"}
                   justifyContent={"center"}
                 >
-                  <img src={graph1} alt="img" />
+                  {data.image}
                 </Grid>
                 <Grid item xs={9}>
                   <Typography sx={{ fontWeight: 600, fontSize: "18px" }}>
-                    Reliable Performance Guarantee
+                    {data.title}
                   </Typography>
                   <Typography sx={{ fontSize: "15px", color: "#6F7F8F" }}>
-                    Dedicated CPU instances ensure predictable performance for
-                    latency-sensitive apps.
+                  {data.desc}
                   </Typography>
                 </Grid>
               </Grid>
@@ -71,7 +72,7 @@ const PriceInfo = () => {
           </Card>
         ))}
       </Box>
-      <Box>
+      <Box sx={{paddingBottom:"1.5rem"}}>
         <TabCart />
       </Box>
     </Box>

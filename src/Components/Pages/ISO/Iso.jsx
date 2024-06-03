@@ -29,7 +29,6 @@ function Iso() {
         <Effortless/>
         <PowerIso/>
         <IsoCard/>
-        
       </Layout>
     </>
   );

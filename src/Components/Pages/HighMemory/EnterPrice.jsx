@@ -31,8 +31,8 @@ const EnterPrice = () => {
       >
         performance for memory-intensive workloads.
       </Typography>
-        <MemoryCard/>
-        <TabCart/>
+      <MemoryCard />
+      <TabCart />
     </Box>
   );
 };

@@ -4,76 +4,56 @@ import Card from "@mui/material/Card";
 import { FaShield } from "react-icons/fa6";
 import CardContent from "@mui/material/CardContent";
 
-const ExperienceCard = () => {
+const ExperienceCard = ({ ExpenceData }) => {
+
+  console.log(ExpenceData)
   return (
-    <Box sx={{ padding: "0rem 3rem", paddingBottom: "2.5rem" }}>
-      <Typography sx={{ textAlign: "Center", fontSize: "35px" }}>
-        Experience Value-Added Features
+    <Box sx={{ padding: "2rem 3rem"}}>
+      <Typography sx={{ textAlign: "Center", fontSize: "40px" }}>
+       {ExpenceData[0]?.title}
       </Typography>
       <Box
         padding={"2rem"}
         sx={{ display: "flex", justifyContent: "space-evenly" }}
       >
-        <Card
-          sx={{
-            maxWidth: 340,
-            padding:3,
-            borderRadius:3,
-            boxShadow: " rgba(0, 0, 0, 0.35) 0px 5px 15px",
-          }}
-        >
-          <CardContent>
-            <Box display={"flex"} justifyContent={"center"} padding={"1rem"}>
-              <FaShield fontSize={"35px"} />
-            </Box>
-            <Typography sx={{ fontSize: "22px",fontWeight:"600", textAlign: "Center" }}>
-              Simplified Management
-            </Typography>
-            <Typography
-              sx={{
-                fontSize: "14px",
-                textAlign: "Center",
-                lineHeight: "23px",
-                letterSpacing: 1,
-                mt: "0.4rem",
-                color: "#677788",
-              }}
-            >
-              Easily create and manage Kubernetes clusters directly through our
-              user-friendly interface or API, saving you time and effort.
-            </Typography>
-          </CardContent>
-        </Card>
-        <Card
-          sx={{
-            maxWidth: 340,
-            padding:3,
-            borderRadius:3,
-            boxShadow: " rgba(0, 0, 0, 0.35) 0px 5px 15px",
-          }}
-        >
-          <CardContent>
-            <Box display={"flex"} justifyContent={"center"} padding={"1rem"}>
-              <FaShield fontSize={"35px"} />
-            </Box>
-            <Typography sx={{ fontSize: "22px",fontWeight:"600", textAlign: "Center" }}>
-              Simplified Management
-            </Typography>
-            <Typography
-              sx={{
-                fontSize: "14px",
-                textAlign: "Center",
-                lineHeight: "23px",
-                letterSpacing: 1,
-                mt: "0.4rem",
-                color: "#677788",
-              }}
-            >
-              Easily create and manage Kubernetes clusters directly through our
-              user-friendly interface or API, saving you time and effort.
-            </Typography>
-          </CardContent>
-        </Card>
+        {ExpenceData.slice(1)?.map((data, index) => (
+          <Card
+          key={index}
+            sx={{
+              maxWidth: 340,
+              padding: 2.2,
+              borderRadius: 3,
+              boxShadow: " rgba(0, 0, 0, 0.35) 0px 5px 15px",
+            }}
+          >
+            <CardContent>
+              <Box display={"flex"} justifyContent={"center"} padding={"1rem"}>
+                {data.image}
+              </Box>
+              <Typography
+                sx={{
+                  fontSize: "24px",
+                  fontWeight: "600",
+                  textAlign: "Center",
+                }}
+              >
+                {data.name}
+              </Typography>
+              <Typography
+                sx={{
+                  fontSize: "16px",
+                  textAlign: "Center",
+                  lineHeight: "23px",
+                  letterSpacing: 1,
+                  mt: "0.4rem",
+                  color: "#677788",
+                }}
+              >
+               {data.desc}
+              </Typography>
+            </CardContent>
+          </Card>
+        ))}
       </Box>
     </Box>
   );

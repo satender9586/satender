@@ -4,10 +4,10 @@ import Card from "@mui/material/Card";
 import monitor from "../../../assets/Pages/monitor.png";
 import CardContent from "@mui/material/CardContent";
 
-const Feature = () => {
+const Feature = (featuredata) => {
   return (
     <>
-      <Box bgcolor={"#F7FAFF"} sx={{ padding: {xs:"2rem 2rem",md:"2rem 5%"} }}>
+      <Box bgcolor={"#F7FAFF"} sx={{ padding: {xs:"2rem 2rem",md:"2rem 5% 3.2rem 5%"} }}>
         <Typography
           sx={{
             fontSize: {xs:"22px",sm:"25px",md:"40px"},
@@ -16,7 +16,7 @@ const Feature = () => {
             textAlign: "center",
           }}
         >
-          Achieve more with Advanced Features
+          {featuredata?.featuredata?.title}
         </Typography>
 
         <Box
@@ -27,7 +27,7 @@ const Feature = () => {
             my: "1rem",
           }}
         >
-          {[1, 2, 3, 4, 5, 6, 7, 8].map((data) => (
+          {featuredata?.featuredata?.data?.map((data) => (
             <Box key={data}>
               <Card
                 sx={{
@@ -42,14 +42,14 @@ const Feature = () => {
                     flexDirection={"column"}
                     alignItems={"center"}
                   >
-                    <img width={50} src={monitor} alt="img" />{" "}
+                    {data.image}
                     <Typography
                       textAlign={"center"}
                       fontSize={"17px"}
                       fontWeight={"600"}
                       paddingY={"0.4rem"}
                     >
-                      SSH Keys
+                      {data.title}
                     </Typography>
                   </Box>
                   <Typography
@@ -59,7 +59,7 @@ const Feature = () => {
                     fontSize={"16px"}
                     lineHeight={1.5}
                   >
-                    Automated, reliable data protection and quick recovery.
+                    {data.desc}
                   </Typography>
                 </CardContent>
               </Card>

@@ -10,7 +10,7 @@ const Management = () => {
         <Typography
           sx={{
             textAlign: "Center",
-            fontSize: "35px",
+            fontSize: "40px",
           }}
         >
           Scale Up Fast With No Limit
@@ -21,7 +21,7 @@ const Management = () => {
           <Typography
             sx={{
               textAlign: "start",
-              fontSize: "23px",
+              fontSize: "25px",
             }}
           >
             Automate Container Management
@@ -29,7 +29,7 @@ const Management = () => {
           <Typography
             sx={{
               textAlign: "start",
-              fontSize: "17px",
+              fontSize: "19px",
               color: "#6F7F8F",
               py: "0.3rem",
               width: "90%",
@@ -99,7 +99,7 @@ const Management = () => {
           <Typography
             sx={{
               textAlign: "start",
-              fontSize: "23px",
+              fontSize: "25px",
             }}
           >
             Scale App Effortlessly
@@ -107,7 +107,7 @@ const Management = () => {
           <Typography
             sx={{
               textAlign: "start",
-              fontSize: "17px",
+              fontSize: "19px",
               color: "#6F7F8F",
               py: "0.3rem",
 

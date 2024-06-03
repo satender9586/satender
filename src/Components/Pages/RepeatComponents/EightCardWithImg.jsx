@@ -4,11 +4,11 @@ import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 import { IoShieldCheckmarkOutline } from "react-icons/io5";
 
-const EightCardWithImg = () => {
+const EightCardWithImg = ({eightcartWithImgdata}) => {
   return (
     <Box sx={{ padding: "3rem 5%" }}>
       <Typography sx={{ textAlign: "Center", fontSize: "35px" }}>
-        Harness the Power of IPv4
+        {eightcartWithImgdata[0]?.title1}
       </Typography>
       <Typography
         sx={{
@@ -18,7 +18,7 @@ const EightCardWithImg = () => {
           color: "#677788",
         }}
       >
-        Elevate your network with IPv4's widespread compatibility, easy
+         {eightcartWithImgdata[0]?.desc1}
       </Typography>
       <Typography
         sx={{
@@ -28,7 +28,7 @@ const EightCardWithImg = () => {
           color: "#677788",
         }}
       >
-        implementation, robust security, and efficient routing.
+         {eightcartWithImgdata[0]?.desc2}
       </Typography>
       <Box
         sx={{
@@ -44,8 +44,9 @@ const EightCardWithImg = () => {
           },
         }}
       >
-        {[1, 2, 3, 4, 5, 6, 7, 8].map((data) => (
+        {eightcartWithImgdata.slice(1)?.map((data,index) => (
           <Card
+          key={index}
             sx={{
               maxWidth: "100%",
               borderRadius: 3,
@@ -54,14 +55,10 @@ const EightCardWithImg = () => {
             }}
           >
             <CardContent>
-              <Box sx={{ display: "flex", justifyContent: "center" }}>
-                <IoShieldCheckmarkOutline size={40} />
+              <Box sx={{ display: "flex", justifyContent: "center",mt:"1.5rem" }}>
+                {data.image}
               </Box>
-              <Typography
-                sx={{ fontSize: "20px", textAlign: "Center", mt: "15px" }}
-              >
-                High Performance
-              </Typography>
+              
               <Typography
                 sx={{
                   fontSize: "14px",
@@ -70,10 +67,11 @@ const EightCardWithImg = () => {
                   mt: "0.4rem",
                   color: "#677788",
                   lineHeight: 1.7,
+                  fontWeight:600,
+                  padding:"1.9rem 0"
                 }}
               >
-                Automatically clone your application data three times to ensure
-                high availability and data durability.
+                {data.desc}
               </Typography>
             </CardContent>
           </Card>

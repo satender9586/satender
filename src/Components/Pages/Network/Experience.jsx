@@ -5,8 +5,13 @@ import CardMedia from "@mui/material/CardMedia";
 import CardContent from "@mui/material/CardContent";
 import cartImg1 from "../../../assets/Pages/cartImg2.webp";
 import { AiOutlineGlobal } from "react-icons/ai";
+import { SlEarphonesAlt } from "react-icons/sl";
 
 const Experience = () => {
+  const cardata = [
+    {image:<AiOutlineGlobal size={50} />,name:"Accessible Anywhere",desc:"Access your data from anywhere, at any time.Whether you're working remotely, on the go, or in the office, you can rest assured that your data is always within reach."},
+    {image:<SlEarphonesAlt size={50}/>,name:"Data Integrity and Security",desc:"Our team of experts is here to help you with any questions or concerns. This ensures that you always have the support you need to keep your data safe and secure."},
+  ]
   return (
     <Box sx={{ padding: { xs: "1rem 4%", md: "2rem 10%" } }}>
       <Typography
@@ -29,14 +34,14 @@ const Experience = () => {
         mt={"2rem"}
         paddingBottom={"1rem"}
       >
-        {[1, 2].map((data) => (
+        {cardata?.map((data) => (
           <Card key={data}  sx={{
             maxWidth: "100%",
             borderRadius: 3,
             boxShadow: " rgba(0, 0, 0, 0.35) 0px 5px 15px",
           }}>
             <Box display={"flex"} justifyContent={"center"} paddingTop={"2rem"}>
-              <AiOutlineGlobal size={50} />
+              {data.image}
             </Box>
             <CardContent>
               <Typography
@@ -48,7 +53,7 @@ const Experience = () => {
                   paddingX:"1rem"
                 }}
               >
-                Accessible Anywhere
+                {data.name}
               </Typography>
               <Typography
                 sx={{
@@ -60,9 +65,7 @@ const Experience = () => {
                   color: "#677788",
                 }}
               >
-                Access your data from anywhere, at any time. Whether you're
-                working remotely, on the go, or in the office, you can rest
-                assured that your data is always within reach.
+                {data.desc}
               </Typography>
             </CardContent>
           </Card>

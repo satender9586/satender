@@ -3,10 +3,15 @@ import React from "react";
 import monitor from "../../../assets/Pages/monitor.png";
 import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
+import cloude1 from "../../../assets/Pages/cloude/1.png"
+import cloude2 from "../../../assets/Pages/cloude/2.png"
+import cloude3 from "../../../assets/Pages/cloude/3.png"
+import cloude4 from "../../../assets/Pages/cloude/4.png"
 
 const ComputeFamily = () => {
+  const data = [{image: cloude1, name:"Shared CPU", desc:"Balance power & performance"},{image: cloude2, name:"Dedicated CPU", desc:"For CPU-intensive applications"},{image: cloude3, name:"High Memory", desc:"Maximum RAM Configuration"},{image: cloude4, name:"GPU", desc:"Speed up complex Workload"}]
   return (
-    <Box bgcolor={"#F7FAFF"}  sx={{ padding: {xs:"2rem 2rem",md:"2rem 3rem"} }}>
+    <Box bgcolor={"#F7FAFF"}  sx={{ padding: {xs:"2rem 2rem",md:"2rem 3rem 2.3rem 3rem"} }}>
       <Typography
         sx={{
           fontSize: {xs:"22px",sm:"25px",md:"40px"},
@@ -33,7 +38,7 @@ const ComputeFamily = () => {
             </Typography>
           </Box>
           <Box mt={"2.5rem"}>
-            {[1].map((data) => (
+            {data.slice(0,1).map((data) => (
               <Box key={data}>
                 <Card
                   sx={{
@@ -49,14 +54,14 @@ const ComputeFamily = () => {
                       flexDirection={"column"}
                       alignItems={"center"}
                     >
-                      <img width={60} src={monitor} alt="img" />
+                      <img width={60} src={data.image} alt="img" />
                       <Typography
                         textAlign={"center"}
                         fontSize={"17px"}
                         fontWeight={"600"}
                         mt={"1.5rem"}
                       >
-                        Dedicated CPU
+                       {data.name}
                       </Typography>
                     </Box>
                     <Typography
@@ -67,7 +72,7 @@ const ComputeFamily = () => {
                       lineHeight={1.5}
                       mt={"0.3rem"}
                     >
-                      Automated, reliable data protection and quick recovery.
+                      {data.desc}
                     </Typography>
                   </CardContent>
                 </Card>
@@ -89,7 +94,7 @@ const ComputeFamily = () => {
               gridTemplateColumns: {xs:"repeat(1, 1fr)",sm:"repeat(2, 1fr)",md:"repeat(3, 2fr)"},
             }}
           >
-            {[1, 2, 3].map((data) => (
+            {data.slice(1).map((data,index) => (
               <Box key={data}>
                 <Card
                   sx={{
@@ -105,14 +110,14 @@ const ComputeFamily = () => {
                       flexDirection={"column"}
                       alignItems={"center"}
                     >
-                      <img width={60} src={monitor} alt="img" />{" "}
+                      <img width={60} src={data.image} alt="img" />{" "}
                       <Typography
                         textAlign={"center"}
                         fontSize={"17px"}
                         fontWeight={"600"}
                         mt={"1.5rem"}
                       >
-                        Dedicated CPU
+                        {data.name}
                       </Typography>
                     </Box>
                     <Typography
@@ -123,7 +128,7 @@ const ComputeFamily = () => {
                       lineHeight={1.5}
                       mt={"0.3rem"}
                     >
-                      Automated, reliable data protection and quick recovery.
+                      {data.desc}
                     </Typography>
                   </CardContent>
                 </Card>

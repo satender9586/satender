@@ -10,7 +10,7 @@ const Simplified = () => {
       sx={{
         padding: "0rem 3rem",
         paddingBottom: "3.5rem",
-        paddingTop: "3.5rem",
+        paddingTop: "2rem",
       }}
     >
       <Typography sx={{ fontSize: "45px", textAlign: "center" }}>
