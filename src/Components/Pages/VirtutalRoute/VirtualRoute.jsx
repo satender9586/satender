@@ -99,7 +99,7 @@ const VirtualRoute = () => {
     },
   ];
 
-  const eightcartWithImgdata = [
+  const eightcartWithImgdata = [ 
     {
       title1: "Empower Your Network with Virtual Routers",
       title2: "",

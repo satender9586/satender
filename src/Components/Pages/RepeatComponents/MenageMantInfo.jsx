@@ -4,7 +4,7 @@ import { FaCloud } from "react-icons/fa";
 
 
 const MenageMantInfo = ({Managementinfodata}) => {
-  console.log("Managementinfodata",Managementinfodata)
+ 
   
   return (
     <Box sx={{ padding: { xs: "0rem 4%", md: "3rem  5% 3.5rem  5%" } }}>
@@ -17,7 +17,7 @@ const MenageMantInfo = ({Managementinfodata}) => {
           lineHeight: 1,
         }}
       >
-       {Managementinfodata[0].title1}
+       {Managementinfodata[0]?.title1}
       </Typography>
       <Typography
         sx={{
@@ -27,7 +27,7 @@ const MenageMantInfo = ({Managementinfodata}) => {
           textAlign: "center",
         }}
       >
-        {Managementinfodata[0].title2}
+        {Managementinfodata[0]?.title2}
       </Typography>
 
       <Typography
@@ -38,7 +38,7 @@ const MenageMantInfo = ({Managementinfodata}) => {
           color: "#677788",
         }}
       >
-         {Managementinfodata[0].desc1}
+         {Managementinfodata[0]?.desc1}
       </Typography>
       <Typography
         sx={{
@@ -48,7 +48,7 @@ const MenageMantInfo = ({Managementinfodata}) => {
           color: "#677788",
         }}
       >
-         {Managementinfodata[0].desc2}
+         {Managementinfodata[0]?.desc2}
       </Typography>
       <Box
         sx={{
@@ -58,7 +58,7 @@ const MenageMantInfo = ({Managementinfodata}) => {
           mt: "1.5rem",
         }}
       >
-        {Managementinfodata.slice(1)?.map((data,index) => (
+        {Managementinfodata?.slice(1)?.map((data,index) => (
           <Box key={index}>
             <Grid container>
               <Grid item xs={1}>

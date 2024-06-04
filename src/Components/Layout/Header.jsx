@@ -33,7 +33,7 @@ const Header = () => {
             },
             top: {
               xs: "0%",sm:"0%",md:"20%",lg:"30%",xl:"",
-              lg: "30%",
+              
             },
             left: {
               xs: "0px",

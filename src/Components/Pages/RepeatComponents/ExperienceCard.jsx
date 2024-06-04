@@ -6,7 +6,7 @@ import CardContent from "@mui/material/CardContent";
 
 const ExperienceCard = ({ ExpenceData }) => {
 
-  console.log(ExpenceData)
+  
   return (
     <Box sx={{ padding: "2rem 3rem"}}>
       <Typography sx={{ textAlign: "Center", fontSize: "40px" }}>
@@ -16,7 +16,7 @@ const ExperienceCard = ({ ExpenceData }) => {
         padding={"2rem"}
         sx={{ display: "flex", justifyContent: "space-evenly" }}
       >
-        {ExpenceData.slice(1)?.map((data, index) => (
+        {ExpenceData?.slice(1).map((data, index) => (
           <Card
           key={index}
             sx={{

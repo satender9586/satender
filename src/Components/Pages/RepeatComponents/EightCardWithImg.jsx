@@ -4,12 +4,14 @@ import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 import { IoShieldCheckmarkOutline } from "react-icons/io5";
 
-const EightCardWithImg = ({eightcartWithImgdata}) => {
+const EightCardWithImg = ({ eightcartWithImgdata }) => {
+  console.log("eightcartWithImgdata", eightcartWithImgdata);
   return (
     <Box sx={{ padding: "3rem 5%" }}>
       <Typography sx={{ textAlign: "Center", fontSize: "35px" }}>
         {eightcartWithImgdata[0]?.title1}
       </Typography>
+
       <Typography
         sx={{
           fontSize: { xs: "17px", md: "20px" },
@@ -18,7 +20,7 @@ const EightCardWithImg = ({eightcartWithImgdata}) => {
           color: "#677788",
         }}
       >
-         {eightcartWithImgdata[0]?.desc1}
+        {eightcartWithImgdata[0]?.desc1}
       </Typography>
       <Typography
         sx={{
@@ -28,14 +30,14 @@ const EightCardWithImg = ({eightcartWithImgdata}) => {
           color: "#677788",
         }}
       >
-         {eightcartWithImgdata[0]?.desc2}
+        {eightcartWithImgdata[0]?.desc2}
       </Typography>
       <Box
         sx={{
           mt: "2rem",
           display: "grid",
-          columnGap: {xs:1,sm:2,md:3,lg:4,xl:5},
-          rowGap:{xs:3,sm:3,md:3,lg:4,xl:5},
+          columnGap: { xs: 1, sm: 2, md: 3, lg: 4, xl: 5 },
+          rowGap: { xs: 3, sm: 3, md: 3, lg: 4, xl: 5 },
           gridTemplateColumns: {
             xs: "repeat(1, 1fr)",
             sm: "repeat(2, 1fr)",
@@ -44,9 +46,9 @@ const EightCardWithImg = ({eightcartWithImgdata}) => {
           },
         }}
       >
-        {eightcartWithImgdata.slice(1)?.map((data,index) => (
+        {eightcartWithImgdata.slice(1)?.map((data, index) => (
           <Card
-          key={index}
+            key={index}
             sx={{
               maxWidth: "100%",
               borderRadius: 3,
@@ -55,10 +57,25 @@ const EightCardWithImg = ({eightcartWithImgdata}) => {
             }}
           >
             <CardContent>
-              <Box sx={{ display: "flex", justifyContent: "center",mt:"1.5rem" }}>
+              <Box
+                sx={{ display: "flex", justifyContent: "center", mt: "1.5rem" }}
+              >
                 {data.image}
               </Box>
-              
+              <Typography
+                sx={{
+                  fontSize: "20px",
+                  textAlign: "Center",
+
+                  mt: "1rem",
+                  color: "#677788",
+
+                  fontWeight: 600,
+                }}
+              >
+                {data?.name}
+              </Typography>
+
               <Typography
                 sx={{
                   fontSize: "14px",
@@ -67,8 +84,8 @@ const EightCardWithImg = ({eightcartWithImgdata}) => {
                   mt: "0.4rem",
                   color: "#677788",
                   lineHeight: 1.7,
-                  fontWeight:600,
-                  padding:"1.9rem 0"
+
+                  padding: data?.name ? "0px" : "1.9rem 0",
                 }}
               >
                 {data.desc}

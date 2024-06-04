@@ -3,6 +3,28 @@ import React from "react";
 import stepImg from "../../../assets/Pages/step.png";
 
 const HowWork = () => {
+  const processsData = [
+    {
+      step: "step:1",
+      name: "Detection",
+      desc: "Detect suspicious traffic flow that might be the signature of potential DDoS cyberattacks.",
+    },
+    {
+      step: " step:2",
+      name: "Diversion",
+      desc: "Redirect traffic using BGP/DNS routing to maintain uninterrupted service for legitimate users. ",
+    },
+    {
+      step: "step:3",
+      name: "Filtering",
+      desc: "DDoS protection filters out malicious traffic while allowing clean traffic to pass through.",
+    },
+    {
+      step: "step:4",
+      name: "Analysis",
+      desc: "Examine your security logs to  ensure you're always protected from DDoS attacks.",
+    },
+  ];
   return (
     <Box
       sx={{ padding: { xs: "1rem 4%", md: "3rem 5%  3rem 5%" } }}
@@ -28,14 +50,27 @@ const HowWork = () => {
           alt="step"
         ></Box>
       </Box>
-      <Box display={"grid"} gridTemplateColumns={"repeat(4,1fr)"} gap={5} mt={"2rem"} paddingBottom={"1rem"}>
-        {[1, 2, 3, 4].map((data) => (
-          <Box >
-            <Typography sx={{textAlign:"center",fontSize:"28px"}}>step:1</Typography>
-            <Typography sx={{textAlign:"center",fontSize:"17px"}}>Detection</Typography>
-            <Typography sx={{textAlign:"center",fontSize:"16px",color:"#677788"}}>
-              Detect suspicious traffic flow that might be the signature of
-              potential DDoS cyberattacks.
+      <Box
+        display={"grid"}
+        gridTemplateColumns={"repeat(4,1fr)"}
+        gap={5}
+        mt={"2rem"}
+        paddingBottom={"1rem"}
+      >
+        {processsData?.map((data, index) => (
+          <Box key={index}>
+            <Typography sx={{ textAlign: "center", fontSize: "20px" }}>
+              {data.step}
+            </Typography>
+            <Typography
+              sx={{ textAlign: "center", fontSize: "17px", fontWeight: "600" }}
+            >
+              {data.name}
+            </Typography>
+            <Typography
+              sx={{ textAlign: "center", fontSize: "16px", color: "#677788" }}
+            >
+              {data.desc}
             </Typography>
           </Box>
         ))}

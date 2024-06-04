@@ -48,15 +48,15 @@ const ExperienceSecure = () => {
       <Box padding={"2rem"} display={"flex"} gap={8}>
         <Box flex={3} sx={{display:"flex",flexDirection:"column",justifyContent:"center",gap:5}}>
          {
-            [1,2].map((data,index)=>(
+            [{name:"User-Friendly List View",desc:"Seamless VPC exploration"},{name:"Effortless Management",desc:"Simplified interface for easyVPC Management"}].map((data,index)=>(
                 <Card key={data} sx={{ maxWidth: "100%",bgcolor: index===value ? "#D4D4D4": "",boxShadow:index===value&& "rgba(0, 0, 0, 0.35) 0px 5px 15px"}} >
                 <CardActionArea onClick={()=> setValue(index)}>
                   <CardContent>
                     <Grid container spacing={1}>
                        <Grid item xs={2}><MdOutlineCropFree size={"100%"}/></Grid>
                        <Grid item xs={10}>
-                        <Typography sx={{fontSize:"18px",fontWeight:"600"}}>User-Friendly List View</Typography>
-                        <Typography sx={{fontSize:"18px",mt:"0.2rem"}}>Seamless VPC exploration</Typography>
+                        <Typography sx={{fontSize:"18px",fontWeight:"600"}}>{data.name}</Typography>
+                        <Typography sx={{fontSize:"18px",mt:"0.2rem"}}>{data.desc}</Typography>
                        </Grid>
                     </Grid>
                   </CardContent>

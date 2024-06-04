@@ -1,8 +1,18 @@
 import { Box, Grid, Typography } from "@mui/material";
 import React from "react";
 import { FaCloud } from "react-icons/fa";
+import { BsStopwatchFill } from "react-icons/bs";
+import { FaShieldVirus } from "react-icons/fa6";
+import { FaStopCircle } from "react-icons/fa";
+import { LuCircuitBoard } from "react-icons/lu";
 
 const Unbrakable = () => {
+  const cardData = [
+    {image:<BsStopwatchFill size={40}/>,name:"24/7 Monitoring",desc:"24/7 monitoring ensures continuous protection for your business against threats, keeping you secure  around the clock."},
+    {image:<FaShieldVirus size={40}/>,name:"Block malicious traffic",desc:"Advanced firewall technology blocks all malicious traffic, providing robust security for your business infrastructure."},
+    {image:<FaStopCircle size={40}/>,name:"Preventive Defense",desc:"Proactive defense mechanisms detect and prevent attacks before they happen, keeping your business safe and secure."},
+    {image:<LuCircuitBoard size={40}/>,name:"Scalability",desc:"Scalable solutions adapt to the changing needs of your business, providing optimal security as you grow and expand."},
+  ]
   return (
     <Box sx={{ padding: { xs: "0rem 4%", md: "0rem  5% 3rem   5%" } }}>
       <Typography
@@ -48,12 +58,12 @@ const Unbrakable = () => {
           mt: "1.5rem",
         }}
       >
-        {[1, 2, 3, 4].map((data) => (
-          <Box>
+        {cardData?.map((data,index) => (
+          <Box key={index}>
             <Grid container>
               <Grid item xs={1}>
                 <Box>
-                  <FaCloud size={40} />
+                  {data.image}
                 </Box>
               </Grid>
               <Grid item xs={11} paddingLeft={"1.5rem"}>
@@ -63,7 +73,7 @@ const Unbrakable = () => {
                     letterSpacing: 1,
                   }}
                 >
-                  24/7 Monitoring
+                 {data.name}
                 </Typography>
                 <Typography
                   sx={{
@@ -73,8 +83,7 @@ const Unbrakable = () => {
                     color: "#6F7F8F",
                   }}
                 >
-                  24/7 monitoring ensures continuous protection for your
-                  business against threats, keeping you secure around the clock.
+                 {data.desc}
                 </Typography>
               </Grid>
             </Grid>

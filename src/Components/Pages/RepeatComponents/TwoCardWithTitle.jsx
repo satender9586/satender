@@ -4,7 +4,7 @@ import Card from "@mui/material/Card";
 import { FaShield } from "react-icons/fa6";
 import CardContent from "@mui/material/CardContent";
 
-const TwoCardWithTitle = () => {
+const TwoCardWithTitle = ({TwoCardWithTitleData}) => {
   return (
     <Box sx={{ padding: { xs: "0rem 4%", md: "3rem  5% 3.5rem  5%" } }}>
       <Typography
@@ -16,7 +16,7 @@ const TwoCardWithTitle = () => {
           lineHeight: 1,
         }}
       >
-        Unlock Connectivity
+        {TwoCardWithTitleData[0]?.title1}
       </Typography>
       <Typography
         sx={{
@@ -27,8 +27,7 @@ const TwoCardWithTitle = () => {
           mt: "1.2rem",
         }}
       >
-        Experience seamless networking with versatile Public and Private IPs.
-        Empower your digital
+        {TwoCardWithTitleData[0]?.desc1}
       </Typography>
       <Typography
         sx={{
@@ -38,16 +37,16 @@ const TwoCardWithTitle = () => {
           color: "#677788",
         }}
       >
-        digital journey with Cloude Data comprehensive IP solutions.
+        {TwoCardWithTitleData[0]?.desc2}
       </Typography>
       <Box sx={{ mt: "3rem",display:"flex",justifyContent:"space-between" }}>
-        {[1, 2].map((data) => (
+        {TwoCardWithTitleData?.slice(1).map((data) => (
           <Card
           key={data}
             sx={{
               maxWidth: 440,
               padding: "1rem 2rem",
-              borderRadius: 1,
+              borderRadius: 2,
               boxShadow: " rgba(0, 0, 0, 0.35) 0px 5px 15px",
             }}
           >
@@ -59,11 +58,11 @@ const TwoCardWithTitle = () => {
                   textAlign: "Center",
                 }}
               >
-                Public IP
+               {data.name}
               </Typography>
               <Typography
                 sx={{
-                  fontSize: "14px",
+                  fontSize: "15px",
                   textAlign: "Center",
                  letterSpacing: 1,
                   mt: "0.4rem",
@@ -71,9 +70,7 @@ const TwoCardWithTitle = () => {
                   lineHeight: 1.8,
                 }}
               >
-                Embrace a globally accessible online presence with Public IP.
-                Connect with the world, host servers, and reach your audience
-                effortlessly.
+               {data.desc}
               </Typography>
             </CardContent>
           </Card>

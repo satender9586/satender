@@ -45,7 +45,7 @@ function Footer() {
                 <span style={{ paddingRight: "0.5rem" }}>
                   <img src={address} width={20} alt="address" />
                 </span>
-                A-45 First Floor, Sector 4, Noida-201301,Utter Pradesh,India
+                A - 212 First floor Okhla Industrial Estate Phase -3 New Delhi , 110020.
               </Typography>
 
               <Typography
